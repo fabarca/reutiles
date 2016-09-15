@@ -17,7 +17,15 @@ createTempDir(parent_dir, temp_dir_prefix = "", length_random_suffix = 10)
 Create a temporary directory with a random name in a specific location.
 }
 \examples{
-temporary_folder = createTempDir(temp_folder,"raster2psql")
-on.exit(unlink(temporary_folder,recursive = TRUE),add=TRUE)
+
+some.function <- function(..., temp_folder = '/default/path'){
+  temporary_folder = createTempDir(temp_folder,"prefix_str")
+  print(temporary_folder)
+  # this will remove the temporary folder at the end of function execution
+  on.exit(unlink(temporary_folder,recursive = TRUE),add=TRUE)
+
+  # Some code
+
+}
 }
 
