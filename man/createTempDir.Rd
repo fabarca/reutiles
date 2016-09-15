@@ -4,7 +4,8 @@
 \alias{createTempDir}
 \title{Create Temporary Directory}
 \usage{
-createTempDir(parent_dir, temp_dir_prefix = "", length_random_suffix = 10)
+createTempDir(parent_dir, temp_dir_prefix = "", length_random_suffix = 10,
+  trailing_slash = TRUE)
 }
 \arguments{
 \item{parent_dir}{Location where the temporary direcotiry will be created.}
@@ -12,6 +13,8 @@ createTempDir(parent_dir, temp_dir_prefix = "", length_random_suffix = 10)
 \item{temp_dir_prefix}{Optional. String that will be used as prefix for the temporary directory.}
 
 \item{length_random_suffix}{Optional. Number of random chars that will be used as suffix. By default 10.}
+
+\item{trailing_slash}{Optional. Boolean indicating if a trailing slash should be added. By default TRUE.}
 }
 \description{
 Create a temporary directory with a random name in a specific location.

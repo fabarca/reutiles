@@ -5,6 +5,7 @@
 #' @param parent_dir Location where the temporary direcotiry will be created.
 #' @param temp_dir_prefix Optional. String that will be used as prefix for the temporary directory.
 #' @param length_random_suffix Optional. Number of random chars that will be used as suffix. By default 10.
+#' @param trailing_slash Optional. Boolean indicating if a trailing slash should be added. By default TRUE.
 #' @export
 #' @examples
 #'
@@ -18,7 +19,7 @@
 #'
 #' }
 
-createTempDir<-function(parent_dir, temp_dir_prefix = "", length_random_suffix = 10){
+createTempDir<-function(parent_dir, temp_dir_prefix = "", length_random_suffix = 10, trailing_slash = TRUE){
   if(!file.exists(parent_dir)){
     stop("ERROR parent_dir does not exist: '", parent_dir, "'")
   }
@@ -36,7 +37,10 @@ createTempDir<-function(parent_dir, temp_dir_prefix = "", length_random_suffix =
         stop("ERROR temporary directory could not be created: '", temporary_dir, "'")
       }
       dir_created = TRUE
-      temporary_dir = paste0(temporary_dir, "/")
+      if(trailing_slash){
+        temporary_dir = paste0(temporary_dir, "/")
+      }
+
     }
 
   }
