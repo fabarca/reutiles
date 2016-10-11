@@ -7,6 +7,22 @@
 
 
 thisScript<-function() {
+
+  is_installed_rstudio = ("rstudioapi" %in% installed.packages()[,"Package"])
+
+  if(is_installed_rstudio){
+    is_rstudio_session = rstudioapi::isAvailable()
+
+    if(is_rstudio_session){
+      is_source_panel_active = (rstudioapi::getActiveDocumentContext()$id != '#console')
+
+      if(is_source_panel_active){
+        this_script_path = normalizePath(rstudioapi::getActiveDocumentContext()$path)
+        return(this_script_path)
+      }
+    }
+  }
+
   sys_frames = sys.frames()
   sourced_file = NULL
   for(i in 1:length(sys_frames)){
