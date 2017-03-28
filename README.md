@@ -10,3 +10,7 @@ library(devtools)
 install_github("fabarca/reutiles")
 
 ```
+
+### Documentation:
+
+[fabarca.github.io/reutiles/](https://fabarca.github.io/reutiles/)
