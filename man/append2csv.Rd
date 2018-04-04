@@ -23,4 +23,3 @@ If the file doesn't exist, the csv will be created using col.names as header. If
 \seealso{
 \code{\link{write.table}}
 }
-

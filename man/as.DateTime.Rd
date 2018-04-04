@@ -4,12 +4,14 @@
 \alias{as.DateTime}
 \title{Date-time Conversion}
 \usage{
-as.DateTime(x, tz = "UTC", ...)
+as.DateTime(x, tz = "UTC", origin = "1970-01-01", ...)
 }
 \arguments{
 \item{x}{An object to be converted.}
 
 \item{tz}{A time zone specification to be used for the conversion. Default 'UTC'.}
+
+\item{origin}{a date-time object, or something which can be coerced to. Default '1970-01-01'.}
 
 \item{...}{Further arguments to be passed to or from other methods.}
 }
@@ -19,4 +21,3 @@ Wrapper to function as.POSIXct
 \seealso{
 \code{\link{as.POSIXct}}
 }
-

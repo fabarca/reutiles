@@ -19,4 +19,3 @@ Prints on the screen a string (or a vector) for debugging, indicating date and t
 \details{
 debug_log is enable by default. It could be disable using: options('reutiles-DEBUG_LOG'=FALSE)
 }
-

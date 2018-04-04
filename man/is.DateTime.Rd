@@ -15,4 +15,3 @@ Test if an object is of POSIXct class
 \seealso{
 \code{\link{POSIXct}}
 }
-

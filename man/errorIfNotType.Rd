@@ -14,4 +14,3 @@ errorIfNotType(x, test_type)
 \description{
 Throw an error if object doesn't match the specified type
 }
-

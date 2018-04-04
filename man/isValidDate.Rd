@@ -12,4 +12,3 @@ isValidDate(date, format = "\%Y-\%m-\%d")
 \description{
 Return a boolean depending on whether the date string is in the right format or not.
 }
-

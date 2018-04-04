@@ -31,4 +31,3 @@ some.function <- function(..., temp_folder = '/default/path'){
 
 }
 }
-

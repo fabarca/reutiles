@@ -9,4 +9,3 @@ isMainRscript()
 \description{
 Return a boolean depending on whether the current script is the main script called from Rscript or not.
 }
-

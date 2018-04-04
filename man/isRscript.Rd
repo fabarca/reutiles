@@ -14,4 +14,3 @@ When returnPath is TRUE, instead of returning a boolean, it returns the path of 
 \description{
 Return a boolean depending on whether the script was called from Rscript or not.
 }
-

@@ -12,4 +12,3 @@ String path or NULL
 \description{
 Returns directory of the current script. When the path couldn't be found, it returns NULL (e.g. R console).
 }
-

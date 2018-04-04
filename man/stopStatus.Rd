@@ -17,4 +17,3 @@ stopStatus stops execution of the current expression and executes an error actio
 \details{
 The default error handler for non-interactive use returns error status 1. Error status 2 is used for R 'suicide', that is a catastrophic failure, and other small numbers are used by specific ports for initialization failures. It is recommended that users choose statuses of 10 or more.
 }
-

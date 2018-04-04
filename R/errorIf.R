@@ -10,7 +10,7 @@ errorIf<-function(x){
   if(x){
     mc = match.call()
     x_name = deparse(mc[[2]])
-    error_str = paste0('Condition [ ', x_name, ' ] is TRUE ')
+    error_str = paste0('Condition [ ', x_name, ' ] is TRUE')
     parent_call = sys.call(-1)
 
     if(!is.null(parent_call)){

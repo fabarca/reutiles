@@ -2,7 +2,7 @@ library(reutiles)
 context("Test Functions errorIf")
 
 test_that("errorIf is working", {
-  expect_that(errorIf(1 != 2), throws_error('"1 != 2" is TRUE'))
+  expect_error(errorIf(1 != 2), "Condition \\[ 1 != 2 \\] is TRUE")
 })
 
 test_that("errorIfNotType is working", {

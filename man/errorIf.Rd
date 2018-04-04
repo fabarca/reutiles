@@ -12,4 +12,3 @@ errorIf(x)
 \description{
 Throw an error if logical expression is TRUE
 }
-

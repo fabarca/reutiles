@@ -12,4 +12,3 @@ isValidDateTime(datetime, format = "\%Y-\%m-\%d \%H:\%M:\%S")
 \description{
 Return a boolean depending on whether the datetime string is in the right format or not.
 }
-
