@@ -1,4 +1,4 @@
-library(reutiles)
+# library(reutiles)
 context("Test Functions errorIf")
 
 test_that("errorIf is working", {
