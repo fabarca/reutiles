@@ -23,6 +23,9 @@ createTempDir<-function(parent_dir, temp_dir_prefix = "", length_random_suffix =
   if(!file.exists(parent_dir)){
     stop("ERROR parent_dir does not exist: '", parent_dir, "'")
   }
+  if(!is.character(temp_dir_prefix)){
+    stop("ERROR temp_dir_prefix must be a character string")
+  }
 
   dir_created = FALSE
 
@@ -45,4 +48,34 @@ createTempDir<-function(parent_dir, temp_dir_prefix = "", length_random_suffix =
 
   }
   return(temporary_dir)
+}
+
+
+#' Run Expression In a Temporary Directory
+#'
+#' @param expr Expression to be evaluated in a temporary directory.
+#' @param tmp_dir Optional. Path to temporary main directory. Default tempdir()
+#' @param prefix Optional. String that will be used as prefix for the temporary subfolder.
+#' @return Returns invisibly the last value evaluated in the expression.
+#' @note Working directory will be change to temporary subfolder. Once the evaluation of
+#'       the expression is finished, the working directory will be restored and the
+#'       temporary subfolder (with its contents) will be deleted. The temporary main
+#'       directory will remain untouched.
+#'
+#' @export
+#' @examples
+#' temp_wd = runInTempDir({getwd()})
+#' temp_wd
+runInTempDir<-function(expr, tmp_dir = tempdir(), prefix = 'temp'){
+  # prefix:  Subfolder prefix
+  checkmate::assert_directory_exists(tmp_dir)
+
+  current_path = getwd()
+  on.exit(setwd(current_path), add = TRUE)
+
+  tmp_path = reutiles::createTempDir(tmp_dir, prefix)
+  on.exit(unlink(tmp_path, recursive = TRUE), add = TRUE)
+  setwd(tmp_path)
+  last_result = expr
+  return(invisible(last_result))
 }
