@@ -4,12 +4,12 @@
 \alias{runInTempDir}
 \title{Run Expression In a Temporary Directory}
 \usage{
-runInTempDir(expr, tmp_dir = tempdir(), prefix = "temp")
+runInTempDir(expr, temp_dir = tempdir(), prefix = "temp")
 }
 \arguments{
 \item{expr}{Expression to be evaluated in a temporary directory.}
 
-\item{tmp_dir}{Optional. Path to temporary main directory. Default tempdir()}
+\item{temp_dir}{Optional. Path to temporary main directory. Default tempdir()}
 
 \item{prefix}{Optional. String that will be used as prefix for the temporary subfolder.}
 }
