@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Prints Debug Log — debug_log • reutiles</title>
+<title>Suppress This Warning — suppressThisWarning • reutiles</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -25,9 +25,9 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-<meta property="og:title" content="Prints Debug Log — debug_log" />
+<meta property="og:title" content="Suppress This Warning — suppressThisWarning" />
 
-<meta property="og:description" content="Prints on the screen a string (or a vector) for debugging, indicating date and time of the system." />
+<meta property="og:description" content="Suppress a specific warning" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -88,37 +88,29 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Prints Debug Log</h1>
+    <h1>Suppress This Warning</h1>
     
-    <div class="hidden name"><code>debug_log.Rd</code></div>
+    <div class="hidden name"><code>suppressThisWarning.Rd</code></div>
     </div>
 
     
-    <p>Prints on the screen a string (or a vector) for debugging, indicating date and time of the system.</p>
+    <p>Suppress a specific warning</p>
     
 
-    <pre class="usage"><span class='fu'>debug_log</span>(<span class='no'>...</span>, <span class='kw'>s</span> <span class='kw'>=</span> <span class='st'>" "</span>, <span class='kw'>c</span> <span class='kw'>=</span> <span class='st'>" "</span>)</pre>
+    <pre class="usage"><span class='fu'>suppressThisWarning</span>(<span class='no'>expr</span>, <span class='no'>pattern</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>...</th>
-      <td><p>Strings, or vectors. Same behavior as paste(...).</p></td>
+      <th>expr</th>
+      <td><p>Expression to be evaluated.</p></td>
     </tr>
     <tr>
-      <th>s</th>
-      <td><p>Optional. A string to separate the terms. Same behavior as 'sep' on paste().</p></td>
-    </tr>
-    <tr>
-      <th>c</th>
-      <td><p>Optional. A string to separate the collapsed vectors. Same behavior as 'collapse' on paste().</p></td>
+      <th>pattern</th>
+      <td><p>Character string (regexp) to be matched with the possible warnings.</p></td>
     </tr>
     </table>
-    
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
-
-    <p>debug_log is enable by default. It could be disable using: options('reutiles-DEBUG_LOG'=FALSE)</p>
     
 
   </div>
@@ -126,9 +118,7 @@
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
-      
-      <li><a href="#details">Details</a></li>
-          </ul>
+                </ul>
 
   </div>
 </div>

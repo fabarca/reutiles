@@ -6,6 +6,7 @@ Description: General Utility Functions.
 Depends:
     R (>= 3.2.2)
 License: MIT + file LICENSE
+BugReports: https://github.com/fabarca/reutiles/issues
 LazyData: true
 RoxygenNote: 6.0.1
 Suggests: testthat
